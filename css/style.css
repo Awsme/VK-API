@@ -1,0 +1,115 @@
+body {
+	height: 100%;
+	width: 100%;
+	background: #eee url('../img/background.png') no-repeat top center;
+}
+div.wrapper {
+	height: 100%;
+	width: 1300px;
+	margin: 0 auto;
+}
+div.container {
+	width: 940px;
+	padding: 40px 180px;
+}
+div.content-center {
+	text-align: center;
+}
+img.tm-logo {
+	padding-bottom: 40px;
+}
+h1.header--title {
+	color: #1c64a0;
+	font: bold 57px 'PT Sans';
+	padding-bottom: 25px;
+}
+h3.header--title__descr {
+	color: #5e5652;
+	font: 24px 'PT Sans';
+	padding-bottom: 25px;
+}
+img.mouse-icon {
+	padding-bottom: 240px;
+}
+div.main-content {.
+	box-shadow: 0 0 15px rgba(0,0,0,0.5);
+	border-radius: 5px;
+	background: #fff;
+	padding: 50px 40px;
+}
+	div.main-content--text {
+		margin-bottom: 60px;
+	}
+	h2.main-content--text__welcome {
+		color: #1c64a0;
+		font: bold 32px 'PT Sans';
+		padding-bottom: 25px;
+	}
+	p.main-content--descr {
+		font: 24px 'PT Sans';
+		color: #5e5652;
+	}
+		span.main-content--descr__tm-blue {
+			color: #2573b5;
+		}
+
+		span.main-content--descr__tm-red {
+			color: #de101a;
+		}
+	
+	div.main-content--backend {
+		padding: 0 165px;
+		margin-bottom: 50px;
+	}
+	label.main-content--backend__label {
+		float: left;
+		color: #5e5652;
+		font: 20px 'PT sans';
+	}
+	a.main-content--backend__no-login {
+		font: 14px 'PT Sans';
+		float: left;
+		color: #1c63a1;
+		padding-bottom: 10px
+	}
+
+	input.main-content--backend__input {
+		border: 1px solid #d3d3d3;
+		border-radius: 5px;
+		width: 530px;
+		padding: 18px 13px;
+		font: 20px 'PT Sans';
+		color: #949494;
+		margin-bottom: 30px;
+		background: #fcfcfc;
+	}
+	select.main-content--backend__select {
+		border: 1px solid #d3d3d3;
+		border-radius: 5px;
+		width: 530px;
+		padding: 18px 13px;
+		font: 20px 'PT Sans';
+		color: #949494;
+		
+		background: #fcfcfc;
+	}
+	div.main-content--vkapi {
+		padding: 0 165px;
+		height: 200px;
+	}
+
+	div.send-friends {
+		margin-bottom: 20px;
+		border: 1px solid #d3d3d3;
+	}
+		.send-friends > p {
+			text-align: left;
+			padding: 10px;
+			font: 18px 'PT Sans';
+			color: #5e5652;
+		}
+
+		.friends-list {
+			background: #f2f2f2;
+			padding: 0 10px;
+		}
