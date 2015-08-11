@@ -49,17 +49,42 @@
 							<option>HTML шаблоны</option>
 						</select>
 					</div>
-					<div class="main-content--vkapi">
+
+					<a href="https://oauth.vk.com/authorize?client_id=5028334&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends,video,offline &response_type=token&v=5.36">sss</a>
+					<a href="https://api.vk.com/method/friends.get?user_id=95366042&v=5.36&access_token=d38528409ed240818f61d8115eceb85a66d20b12a759368a3ab2e439851b62520d29134cc8955b2a9b748">sss</a>
+<!-- 					<div class="main-content--vkapi">
 						<div class="send-friends">
 							<p>
 								<input type="checkbox" checked>Отправить всем друзьям
 							</p>
-							<div class="friends-list">
-								ss
-							</div>
+
+							<ul>
+								<li><img src="img/photo.png" alt="photo"></li>
+								<li><img src="img/photo-1.png" alt="photo-1"></li>
+								<li><img src="img/photo-2.png" alt="photo-2"></li>
+								<li><img src="img/photo.png" alt="photo"></li>
+							</ul>
+							<ul>
+								<li><img src="img/photo.png" alt="photo"></li>
+								<li><img src="img/photo-1.png" alt="photo-1"></li>
+								<li><img src="img/photo-2.png" alt="photo-2"></li>
+								<li><img src="img/photo.png" alt="photo"></li>
+							</ul>
+							<ul>
+								<li><img src="img/photo.png" alt="photo"></li>
+								<li><img src="img/photo-1.png" alt="photo-1"></li>
+								<li><img src="img/photo-2.png" alt="photo-2"></li>
+								<li><img src="img/photo.png" alt="photo"></li>
+							</ul>
+							<ul>
+								<li><img src="img/photo.png" alt="photo"></li>
+								<li><img src="img/photo-1.png" alt="photo-1"></li>
+								<li><img src="img/photo-2.png" alt="photo-2"></li>
+								<li><img src="img/photo.png" alt="photo"></li>
+							</ul>
 						</div>
 					</div>
-					
+					 -->
 				</div>
 			</div>
 		</div>

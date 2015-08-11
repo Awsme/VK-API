@@ -3,6 +3,9 @@ body {
 	width: 100%;
 	background: #eee url('../img/background.png') no-repeat top center;
 }
+.clearfix {
+	clear:both;
+}
 div.wrapper {
 	height: 100%;
 	width: 1300px;
@@ -95,7 +98,7 @@ div.main-content {.
 	}
 	div.main-content--vkapi {
 		padding: 0 165px;
-		height: 200px;
+		position: relative;
 	}
 
 	div.send-friends {
@@ -108,8 +111,7 @@ div.main-content {.
 			font: 18px 'PT Sans';
 			color: #5e5652;
 		}
-
-		.friends-list {
-			background: #f2f2f2;
-			padding: 0 10px;
+		.send-friends > ul {
+			width: 230px;
+			padding-lefT: 8px;
 		}
