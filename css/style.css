@@ -115,3 +115,79 @@ div.main-content {.
 			width: 230px;
 			padding-lefT: 8px;
 		}
+	div.vkapi {
+		margin: 0 165px;
+		background: #fcfcfc;
+		border: 1px solid #d3d3d3;
+	}
+	.vkapi > .checkbox {
+		text-align: left;
+		padding: 10px;
+		font: 18px 'PT Sans';
+		color: #5e5652;
+	}
+	.vkapi > .checkbox > input {
+		margin-right: 10;
+	}
+	.vkapi > .vkfriends {
+		background: #f2f2f2;
+		margin: 0 10px 15px 10px;
+		height: 42%;
+	}
+	
+	.vkfriends > ul {
+		/*display: none;*/
+		margin: 0;
+		padding: 7px 8px;
+		width: 100%;
+	}
+	.vkfriends > ul > li {
+		box-shadow: 0 0 2px rgba(0,0,0,0.2);
+		display: inline-block;
+		height: 60px;
+		width: 212px;
+		float: left;
+		padding: 5px 15px;
+		background: #fff;
+		border-radius: 8px;
+		margin-right: 7px;
+		margin-bottom: 7px;
+	}
+	.vkfriends > ul > li > input {
+		float: left;
+		vertical-align: 20px;
+	}
+	.vkfriends > ul > li > img {
+		margin: 6px 13px 6px 0;
+		float: left;
+	}
+	.vkfriends > ul > li > a {
+		text-align: left;
+		padding: 17px 0;
+		width: 100px;
+		float: left;
+		font: bold 12px Arial;
+		color: #4b6f94;
+		text-decoration: none;
+	}
+	.vkfriends > ul > li:nth-child(2n+1) {
+		clear: both;
+	}
+	.vkfriends > ul > li > .username {
+		vertical-align: 30px;
+	}
+	.vkfriends > ul > li > .usersurname {
+		vertical-align: 10px;
+	}
+	.vkfriends > ul > li > input[type=checkbox] {
+		background: url('../img/add.png') 0 0 no-repeat;
+		width: 24px;
+		height: 24px;
+		margin:17px 13px 17px 0;
+		cursor: pointer;
+		-webkit-appearance: none;
+		transition: .3s;
+	}
+	.vkfriends > ul > li > input[type=checkbox]:checked {
+		background: url('../img/checked.png') 0 0 no-repeat;
+	}
