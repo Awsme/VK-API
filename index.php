@@ -8,13 +8,15 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans" />
+	<script type="text/javascript" src="http://userapi.com/js/api/openapi.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
 	
 </head>
 
 <body>
 <?php 
 	require_once "api/api.php";
-	$api = new vkApi();
+	$api = new Vkapi();
 ?>
 	<div class="wrapper">
 		<div class="container">
@@ -52,30 +54,42 @@
 							<option>Woocommerce шаблоны</option>
 							<option>HTML шаблоны</option>
 						</select>
-						<?php $api->$autorize_link ?>
+						<?php
+							$api->authorize_link();
+						?>
 					</div>
-					<div class="vkapi">
-						<div class="checkbox">
-							<input type="checkbox" checked>Отправить всем друзьям
+					<form action="POST">
+						<div class="vkapi">
+							
+								<div class="checkbox">
+									<input type="checkbox" value="1" name="user_id" checked>Отправить всем друзьям
+								</div>
+								<div class="vkfriends">
+									<ul>
+										<?php
+											$api->run();
+										?>
+										<li><input type="checkbox" checked><img src="img/photo.png" alt=""><a href="#">UserName<br>UserSurname</a></li>
+										<li><input type="checkbox" checked><img src="img/photo.png" alt=""><a href="#">UserName<br>UserSurname</a></li>
+										<li><input type="checkbox" checked><img src="img/photo.png" alt=""><a href="#">UserName<br>UserSurname</a></li>
+										<li><input type="checkbox" checked><img src="img/photo.png" alt=""><a href="#">UserName<br>UserSurname</a></li>
+										<li><input type="checkbox" checked><img src="img/photo.png" alt=""><a href="#">UserName<br>UserSurname</a></li>
+										<li><input type="checkbox" checked><img src="img/photo.png" alt=""><a href="#">UserName<br>UserSurname</a></li>
+										<li><input type="checkbox" checked><img src="img/photo.png" alt=""><a href="#">UserName<br>UserSurname</a></li>
+										<li><input type="checkbox" checked><img src="img/photo.png" alt=""><a href="#">UserName<br>UserSurname</a></li>
+									</ul>
+								</div>
+							
+							
+							<?php
+								$api->echoing();
+							?>
 						</div>
-						<div class="vkfriends">
-							<ul>
-								<li><input type="checkbox" checked><img src="img/photo.png" alt=""><a href="#">UserName<br>UserSurname</a></li>
-								<li><input type="checkbox" checked><img src="img/photo.png" alt=""><a href="#">UserName<br>UserSurname</a></li>
-								<li><input type="checkbox" checked><img src="img/photo.png" alt=""><a href="#">UserName<br>UserSurname</a></li>
-								<li><input type="checkbox" checked><img src="img/photo.png" alt=""><a href="#">UserName<br>UserSurname</a></li>
-								<li><input type="checkbox" checked><img src="img/photo.png" alt=""><a href="#">UserName<br>UserSurname</a></li>
-								<li><input type="checkbox" checked><img src="img/photo.png" alt=""><a href="#">UserName<br>UserSurname</a></li>
-								<li><input type="checkbox" checked><img src="img/photo.png" alt=""><a href="#">UserName<br>UserSurname</a></li>
-								<li><input type="checkbox" checked><img src="img/photo.png" alt=""><a href="#">UserName<br>UserSurname</a></li>
-							</ul>
-						</div>
-					</div>
+					</form>
+					<button type="submit" class="send_button"><span>Посмотреть пример</span></button>
 				</div>
 			</div>
 		</div>
 	</div>
-	
-	
 </body>
 </html>

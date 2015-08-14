@@ -93,8 +93,10 @@ div.main-content {.
 		padding: 18px 13px;
 		font: 20px 'PT Sans';
 		color: #949494;
-		
 		background: #fcfcfc;
+	}
+	select.main-content--backend__select > option {
+		padding: 10px;
 	}
 	div.main-content--vkapi {
 		padding: 0 165px;
@@ -116,6 +118,7 @@ div.main-content {.
 			padding-lefT: 8px;
 		}
 	div.vkapi {
+		overflow: auto;
 		margin: 0 165px;
 		background: #fcfcfc;
 		border: 1px solid #d3d3d3;
