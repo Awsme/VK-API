@@ -2,6 +2,7 @@ body {
 	height: 100%;
 	width: 100%;
 	background: #eee url('../img/background.png') no-repeat top center;
+	background-size: 100%;
 }
 
 .clearfix {
@@ -10,11 +11,11 @@ body {
 div.wrapper {
 	height: 100%;
 	width: 1300px;
-	margin: 0 auto;
+	margin: 0 auto;padding: 40px 180px;
 }
 div.container {
 	width: 940px;
-	padding: 40px 180px;
+	margin: 0 auto;
 }
 div.content-center {
 	text-align: center;
@@ -175,8 +176,8 @@ div.main-content {.
 		text-decoration: none;
 	}
 	.vkfriends > ul > li:nth-child(2n) {
-		    margin: 0;
-    margin-bottom: 7px;
+	    margin: 0;
+    	margin-bottom: 7px;
 	}
 	.vkfriends > ul > li > .username {
 		vertical-align: 30px;
@@ -185,7 +186,7 @@ div.main-content {.
 		vertical-align: 10px;
 	}
 	.vkfriends > ul > li > input[type=checkbox] {
-		background: url('../img/checked.png') 0 0 no-repeat;
+		background: url('../img/add.png') 0 0 no-repeat;
 		width: 24px;
 		height: 24px;
 		margin:17px 13px 17px 0;
@@ -194,7 +195,7 @@ div.main-content {.
 		transition: .3s;
 	}
 	.vkfriends > ul > li > input[type=checkbox]:checked {
-		background: url('../img/add.png') 0 0 no-repeat;
+		background: url('../img/checked.png') 0 0 no-repeat;
 	}
 	a.show_example {
 		padding: 16px 31px;
@@ -203,3 +204,112 @@ div.main-content {.
 		background: #de4a4a;
 		text-decoration: none;
 	}
+
+/*
+ssssssssssssssssssssssssssssssssssssssssssssssssssss
+*/
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    cursor: default;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    z-index: 1;
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -ms-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+.popup {
+    background-color: #fff;
+    display: inline-block;
+    left: 50%;
+    opacity: 0;
+    padding: 40px;
+    position: fixed;
+    text-align: justify;
+    top: 40%;
+    visibility: hidden;
+    z-index: 10;
+    width: 620px;
+
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 5px;
+
+    -webkit-transition: opacity .5s, top .5s;
+    -moz-transition: opacity .5s, top .5s;
+    -ms-transition: opacity .5s, top .5s;
+    -o-transition: opacity .5s, top .5s;
+    transition: opacity .5s, top .5s;
+}
+.overlay:target+.popup {
+    opacity: 1;
+    visibility: visible;
+}
+.close {
+	background: url('../img/close-popup.png') no-repeat center;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-decoration: none;
+    top: -40px;
+	font: bold 24px "PT Sans";
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 55px;
+}
+.close:hover {
+	background: url('../img/close-popup-hover.png') no-repeat center;
+
+}
+.popup p, .popup div {
+    margin-bottom: 10px;
+}
+.popup label {
+    display: inline-block;
+    text-align: left;
+    width: 120px;
+}
+.popup input[type="text"], .popup input[type="password"] {
+    border: 1px solid;
+    border-color: #999 #ccc #ccc;
+    margin: 0;
+    padding: 2px;
+
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+}
+.conclusion_title {
+	font: bold 27px "PT Sans";
+	color: #4273aa;
+	text-align: center;
+}
+/*
+ssssssssssssssssssssssssssssssssssssssssssssssssssss
+*/
