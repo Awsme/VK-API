@@ -3,6 +3,7 @@ body {
 	width: 100%;
 	background: #eee url('../img/background.png') no-repeat top center;
 }
+
 .clearfix {
 	clear:both;
 }
@@ -118,10 +119,11 @@ div.main-content {.
 			padding-lefT: 8px;
 		}
 	div.vkapi {
-		overflow: auto;
 		margin: 0 165px;
 		background: #fcfcfc;
 		border: 1px solid #d3d3d3;
+		height: 340px;
+		margin-bottom: 56px;
 	}
 	.vkapi > .checkbox {
 		text-align: left;
@@ -133,23 +135,22 @@ div.main-content {.
 		margin-right: 10;
 	}
 	.vkapi > .vkfriends {
+		overflow: auto;
+		height: 280px;
 		background: #f2f2f2;
 		margin: 0 10px 15px 10px;
-		height: 42%;
+		border-radius: 5px;
 	}
 	
 	.vkfriends > ul {
-		/*display: none;*/
 		margin: 0;
 		padding: 7px 8px;
-		width: 100%;
 	}
 	.vkfriends > ul > li {
 		box-shadow: 0 0 2px rgba(0,0,0,0.2);
 		display: inline-block;
 		height: 60px;
-		width: 212px;
-		float: left;
+		width: 204px;
 		padding: 5px 15px;
 		background: #fff;
 		border-radius: 8px;
@@ -164,7 +165,7 @@ div.main-content {.
 		margin: 6px 13px 6px 0;
 		float: left;
 	}
-	.vkfriends > ul > li > a {
+	.vkfriends > ul > li > p {
 		text-align: left;
 		padding: 17px 0;
 		width: 100px;
@@ -173,8 +174,9 @@ div.main-content {.
 		color: #4b6f94;
 		text-decoration: none;
 	}
-	.vkfriends > ul > li:nth-child(2n+1) {
-		clear: both;
+	.vkfriends > ul > li:nth-child(2n) {
+		    margin: 0;
+    margin-bottom: 7px;
 	}
 	.vkfriends > ul > li > .username {
 		vertical-align: 30px;
@@ -183,7 +185,7 @@ div.main-content {.
 		vertical-align: 10px;
 	}
 	.vkfriends > ul > li > input[type=checkbox] {
-		background: url('../img/add.png') 0 0 no-repeat;
+		background: url('../img/checked.png') 0 0 no-repeat;
 		width: 24px;
 		height: 24px;
 		margin:17px 13px 17px 0;
@@ -192,5 +194,12 @@ div.main-content {.
 		transition: .3s;
 	}
 	.vkfriends > ul > li > input[type=checkbox]:checked {
-		background: url('../img/checked.png') 0 0 no-repeat;
+		background: url('../img/add.png') 0 0 no-repeat;
+	}
+	a.show_example {
+		padding: 16px 31px;
+		color: #FFFFFF;
+		font: 24px "PT Sans";
+		background: #de4a4a;
+		text-decoration: none;
 	}
