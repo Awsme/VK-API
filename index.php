@@ -71,50 +71,60 @@
 								<div id="vk_auth"></div>
 								<script type="text/javascript">
 								VK.init({apiId: 5028334});
-								VK.Widgets.Auth("vk_auth", {width: "492px", onAuth: function(data) {
-									if(data.session) {
-										document.getElementById("vk_auth").style.display = "none";
+									console.log("test");
+
+								VK.Auth.getLoginStatus(function(response){
+									if (!response.session) {
+										VK.Widgets.Auth("vk_auth", {width: "492px"});
 									}
-									VK.Api.call('friends.get', {
-									    fields: 'user_id, first_name, last_name, photo'
+								});
+								/*function authInfo(response) {
+									if (response.session) {
+										console.log('user: '+response.session.mid);
+									} else {
+										console.log('not auth');
+									}
+								}
+								VK.Auth.getLoginStatus(authInfo);*/
+								VK.Api.call('friends.get', {
+										fields: 'user_id, first_name, last_name, photo'
 									}, function(s){
-										if(s.response) {
-											for(i = 0; i < s.response.length; i++){
-												var friendUl = document.getElementById("vkapi");
-												var friendList = document.createElement("li");
-												var friendChecked = document.createElement("input");
-												friendChecked.setAttribute("type", "checkbox");
-												friendChecked.setAttribute("name", "user_id");
-												friendChecked.setAttribute("id", "id" + i);
+									if(s.response) {
+										for(i = 0; i < s.response.length; i++){
+											var friendUl = document.getElementById("vkapi");
+											var friendList = document.createElement("li");
+											var friendChecked = document.createElement("input");
+											friendChecked.setAttribute("type", "checkbox");
+											friendChecked.setAttribute("name", "user_id");
+											friendChecked.setAttribute("id", "id" + i);
 
-												var friendImage = document.createElement("img");
-												friendImage.setAttribute("src", s.response[i].photo);
-												friendImage.setAttribute("alt", s.response[i].last_name);
+											var friendImage = document.createElement("img");
+											friendImage.setAttribute("src", s.response[i].photo);
+											friendImage.setAttribute("alt", s.response[i].last_name);
 
-												var friendLink = document.createElement("p");
-												var friendName = document.createTextNode(s.response[i].first_name + " " + s.response[i].last_name);
-										
-												friendLink.appendChild(friendName);
+											var friendLink = document.createElement("p");
+											var friendName = document.createTextNode(s.response[i].first_name + " " + s.response[i].last_name);
+									
+											friendLink.appendChild(friendName);
 
-												friendList.appendChild(friendChecked);
-												friendList.appendChild(friendImage);
-												friendList.appendChild(friendLink);
+											friendList.appendChild(friendChecked);
+											friendList.appendChild(friendImage);
+											friendList.appendChild(friendLink);
 
-												friendUl.appendChild(friendList);
-											}
-											// var checkedList = [];
-											// for(i = 0; i < s.response.length; i++) {
-											// 	var checkedFriend = document.getElementById("id" + i);
-											// 	if(checkedFriend.checked) {
-											// 		checkedList.push(checkedFriend);
-											// 		console.log(checkedList);
-											// 	}
-											// }
-								    	}	
-									    
-									});
+											friendUl.appendChild(friendList);
+										}
+										// var checkedList = [];
+										// for(i = 0; i < s.response.length; i++) {
+										// 	var checkedFriend = document.getElementById("id" + i);
+										// 	if(checkedFriend.checked) {
+										// 		checkedList.push(checkedFriend);
+										// 		console.log(checkedList);
+										// 	}
+										// }
+							    	}	
+								    
+								});
 
-								} });
 								$('#all_friends').on('click', function(event) {
 									if($(this).is(":checked")) {
 										$('input[name="user_id"]').prop({
